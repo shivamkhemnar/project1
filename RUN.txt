@@ -1,0 +1,36 @@
+DocuMind AI — run on localhost (two terminals, PowerShell)
+
+TERMINAL 1 — BACKEND (http://127.0.0.1:8000):
+  cd "C:\projects\project 1\backend"
+  .\venv\Scripts\Activate.ps1
+  python -m uvicorn main:app --reload --port 8000
+
+TERMINAL 2 — FRONTEND (http://localhost:3000):
+  cd "C:\projects\project 1\frontend"
+  npm run dev
+
+One-time setup (already done, do NOT repeat every run):
+  backend : .\venv\Scripts\Activate.ps1 + pip install -r requirements.txt
+  frontend: npm install
+
+Health: http://127.0.0.1:8000/health  (expect status ok, provider groq)
+Stop  : Ctrl+C in each terminal.
+
+
+cd "C:\projects\project 1\backend"
+.\venv\Scripts\Activate.ps1cd "C:\projects\project 1\backend"
+
+
+
+for changind env
+
+deactivate
+cd "C:\projects\project 1\backend"
+.\venv\Scripts\Activate.ps1
+
+backend
+python -m uvicorn main:app --reload --port 8000
+
+frontend
+cd "C:\projects\project 1\frontend"
+npm run dev
